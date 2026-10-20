@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Golden Slots - Koin Virtual</title>
+<title>Joel999</title>
 <style>
   :root {
     --gold: #f5c542;
@@ -169,8 +169,8 @@
 </head>
 <body>
 
-<h1>✦ Golden Slots ✦</h1>
-<div class="sub">Hiburan dengan koin virtual, tanpa uang sungguhan</div>
+<h1>✦Joel✦ 🎰</h1>
+<div class="sub">WEB ANTI BAPERRR😝</div>
 
 <div class="machine">
   <div class="info">
@@ -181,12 +181,12 @@
 
   <div class="reels">
     <div class="payline"></div>
-    <div class="reel" id="reel0"><div class="symbol">7️⃣</div></div>
+    <div class="reel" id="reel0"><div class="symbol">🌙</div></div>
     <div class="reel" id="reel1"><div class="symbol">🍒</div></div>
     <div class="reel" id="reel2"><div class="symbol">🔔</div></div>
   </div>
 
-  <div class="win-msg" id="message">Pasang taruhanmu dan putar!</div>
+  <div class="win-msg" id="message">SPIN KAN LEEE</div>
 
   <div class="bet-row">
     <button id="minus">−</button>
@@ -199,16 +199,16 @@
 </div>
 
 <div class="paytable">
-  <h3>Tabel Pembayaran (baris tengah)</h3>
+  <h3>DAFTAR WD JACKPOT</h3>
   <div><span>💎 💎 💎</span><b>x50</b></div>
-  <div><span>7️⃣ 7️⃣ 7️⃣</span><b>x20</b></div>
+  <div><span>🌙 🌙 🌙</span><b>x20</b></div>
   <div><span>🔔 🔔 🔔</span><b>x10</b></div>
   <div><span>🍒 🍒 🍒</span><b>x5</b></div>
   <div><span>🍋 🍋 🍋</span><b>x3</b></div>
   <div><span>🐉 🐉 🐉</span><b>x100</b></div>
 </div>
 
-<div class="disclaimer">Koin virtual tidak memiliki nilai uang, tidak dapat ditukar, dan tidak dapat di-top-up. Game ini hanya untuk hiburan.</div>
+<div class="disclaimer">WEBSITE ANTI STRESS</div>
 
 <script>
   
@@ -248,10 +248,10 @@ const sfx = {
   lose()  { beep(300, 0.2, "sine", 0.15); beep(200, 0.3, "sine", 0.15, 0.15); },
   click() { beep(900, 0.04, "square", 0.08); }
 };
-  const SYMBOLS = ["🍒", "🍋", "🔔", "7️⃣", "💎", "🐉"];
-  const PAY = { "💎": 50, "7️⃣": 20, "🔔": 10, "🍒": 5, "🍋": 3 , "🐉": 100};
+  const SYMBOLS = ["🍒", "🍋", "🔔", "🌙", "💎", "🐉"];
+  const PAY = { "💎": 50, "🌙": 20, "🔔": 10, "🍒": 5, "🍋": 3 , "🐉": 100};
   const START_COINS = 10000;
-  const BETS = [500, 1000, 2500, 5000, 9000];
+  const BETS = [500, 1000, 2000, 5000, 9000];
 
   let balance = START_COINS;
   let betIndex = 1;
@@ -274,15 +274,15 @@ const sfx = {
   function calcWin(result, bet) {
     const [a, b, c] = result;
     if (a === b && b === c) return bet * PAY[a];
-    if (a === b || b === c || a === c) return bet * 1;
-    return 0;
+    if (a === b || b === c || a === c) return bet * 2;
+    return 1000;
   }
 
   function spin() {
     if (spinning) return;
     const bet = BETS[betIndex];
     if (balance < bet) {
-      $("message").textContent = "Koin virtual tidak cukup. Tekan Reset Koin untuk mulai lagi.";
+      $("message").textContent = "Koin gak cukup.TopUp lagi untuk gaskuen.";
       return;
     }
 
@@ -344,7 +344,7 @@ const sfx = {
   $("resetBtn").addEventListener("click", () => {
     if (spinning) return;
     balance = START_COINS;
-    $("message").textContent = "Koin direset ke " + START_COINS + ".";
+    $("message").textContent = "TopUp Berhasil " + START_COINS + ".";
     render();
   });
 
